@@ -1,0 +1,28 @@
+.friends {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "ff"
+}
+
+.friends .friend a {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.item {
+    grid-area: f;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.friend a.activeLink {
+    color: lightgrey;
+}

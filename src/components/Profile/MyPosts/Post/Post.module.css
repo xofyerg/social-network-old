@@ -1,0 +1,12 @@
+.item {
+    color: chartreuse;
+}
+
+.itemLike {
+    color: blueviolet;
+}
+
+.item img {
+    width: 50px;
+    border-radius: 50px;
+}
