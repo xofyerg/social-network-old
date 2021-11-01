@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/social-network-app/static/css/main.85f6c796.chunk.css",
+    "main.js": "/social-network-app/static/js/main.8f6919ba.chunk.js",
+    "main.js.map": "/social-network-app/static/js/main.8f6919ba.chunk.js.map",
+    "runtime-main.js": "/social-network-app/static/js/runtime-main.aa2032ee.js",
+    "runtime-main.js.map": "/social-network-app/static/js/runtime-main.aa2032ee.js.map",
+    "static/js/2.f7093b79.chunk.js": "/social-network-app/static/js/2.f7093b79.chunk.js",
+    "static/js/2.f7093b79.chunk.js.map": "/social-network-app/static/js/2.f7093b79.chunk.js.map",
+    "static/css/3.a4297b3e.chunk.css": "/social-network-app/static/css/3.a4297b3e.chunk.css",
+    "static/js/3.ffaa6416.chunk.js": "/social-network-app/static/js/3.ffaa6416.chunk.js",
+    "static/js/3.ffaa6416.chunk.js.map": "/social-network-app/static/js/3.ffaa6416.chunk.js.map",
+    "static/css/4.df1fd342.chunk.css": "/social-network-app/static/css/4.df1fd342.chunk.css",
+    "static/js/4.67616d53.chunk.js": "/social-network-app/static/js/4.67616d53.chunk.js",
+    "static/js/4.67616d53.chunk.js.map": "/social-network-app/static/js/4.67616d53.chunk.js.map",
+    "static/js/5.adea6012.chunk.js": "/social-network-app/static/js/5.adea6012.chunk.js",
+    "static/js/5.adea6012.chunk.js.map": "/social-network-app/static/js/5.adea6012.chunk.js.map",
+    "index.html": "/social-network-app/index.html",
+    "static/css/3.a4297b3e.chunk.css.map": "/social-network-app/static/css/3.a4297b3e.chunk.css.map",
+    "static/css/4.df1fd342.chunk.css.map": "/social-network-app/static/css/4.df1fd342.chunk.css.map",
+    "static/css/main.85f6c796.chunk.css.map": "/social-network-app/static/css/main.85f6c796.chunk.css.map",
+    "static/js/2.f7093b79.chunk.js.LICENSE.txt": "/social-network-app/static/js/2.f7093b79.chunk.js.LICENSE.txt",
+    "static/media/preloader.696882ed.svg": "/social-network-app/static/media/preloader.696882ed.svg",
+    "static/media/profile-picture-not-found.png": "/social-network-app/static/media/profile-picture-not-found.b2f1f6e1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa2032ee.js",
+    "static/js/2.f7093b79.chunk.js",
+    "static/css/main.85f6c796.chunk.css",
+    "static/js/main.8f6919ba.chunk.js"
+  ]
+}
