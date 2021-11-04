@@ -2,3 +2,38 @@
     width: 75px;
     height: 75px;
 }
+
+.users {
+    display: grid;
+    grid-template-columns: 0fr 3fr 2fr;
+    transition: 0.1s linear;
+    padding: 10px;
+    border-bottom: 1px black solid;
+}
+.userInfo {
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+.status {
+    font-size: 15px;
+}
+
+.users img {
+    border-radius: 50%;
+}
+
+.users button {
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    outline: none;
+    border: 0px solid;
+    padding: 5px 50px;
+    background: #3D60A1;
+}
+.users button:hover {
+    background: #0C5AA6;
+}
+
+

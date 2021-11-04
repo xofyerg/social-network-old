@@ -1,5 +1,10 @@
 body {
     font-family: "Torus Notched SemiBold";
+    background: linear-gradient(to right, #8E9CD3, #14326A);
+}
+
+button {
+    font-family: "Torus Notched SemiBold";
 }
 
 .app-wrapper {
@@ -16,6 +21,6 @@ body {
 
 .app-wrapper-content {
     grid-area: c;
-    background-color: cadetblue;
+    background-color: #7093D2;
     border-radius: 5px;
 }

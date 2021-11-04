@@ -1,10 +1,27 @@
 .paginator {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr ;
     margin: 10px;
 }
 
+.paginator button {
+    color: white;
+    font-size: 13px;
+    border-radius: 4px;
+    outline: none;
+    border: 0px solid;
+    padding: 6px 20px;
+    margin-right: 8px;
+    background: #3D60A1;
+}
+
 .pageNumber {
-    padding: 2px;
+
+    margin-right: 8px;
+    padding: 2px 0px;
     border: 1px solid grey;
+    background: #3D60A1;
 }
 
 .pageNumber.selectedPage {

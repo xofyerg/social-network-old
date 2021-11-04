@@ -6,7 +6,7 @@ const ProfileStatusWithHooks = (props) => {
 
   useEffect(() => {
     setStatus(props.status);
-  }, [props.status]);
+  }, [props.status]); // если статус в глобальном state изменился, запускай setStatus
 
   const activateEditMode = () => {
     setEditMode(true);
@@ -26,7 +26,7 @@ const ProfileStatusWithHooks = (props) => {
       {!editMode && (
         <div>
           <span onDoubleClick={activateEditMode}>
-            {props.status || "No status"}
+            {"Status: " + props.status || "No status"}
           </span>
         </div>
       )}
