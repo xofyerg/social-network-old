@@ -1,12 +1,13 @@
 .item {
-    color: chartreuse;
-}
-
-.itemLike {
-    color: blueviolet;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .item img {
     width: 50px;
     border-radius: 50px;
+}
+
+.item span {
+    padding-left: 10px;
 }

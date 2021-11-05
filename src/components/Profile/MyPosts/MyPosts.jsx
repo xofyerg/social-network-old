@@ -20,7 +20,7 @@ let AddNewPostForm = (props) => {
             name="newPostText"
             placeholder="Enter your post text"
             validate={[required, maxLength10]}
-          ></Field>
+          />
         </div>
         <div>
           <button>Send</button>
@@ -36,14 +36,7 @@ let AddNewPostFormRedux = reduxForm({
 
 const MyPosts = React.memo((props) => {
   let postsElements = props.posts.map((p) => {
-    return (
-      <Post
-        id={p.id}
-        message={p.message}
-        likesCount={p.likesCount}
-        key={p.id}
-      ></Post>
-    );
+    return <Post id={p.id} message={p.message} key={p.id} />;
   });
 
   let onAddPost = (values) => {

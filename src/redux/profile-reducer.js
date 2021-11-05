@@ -10,8 +10,8 @@ const SAVE_PROFILE_SUCCESS = "SAVE_PROFILE_SUCCESS";
 
 let initialState = {
   posts: [
-    { id: 1, message: "Hi, how are you?", likesCount: 22 },
-    { id: 2, message: "It's my first post", likesCount: 6 },
+    { id: 1, message: "Hi, how are you?" },
+    { id: 2, message: "It's my first post" },
   ],
   profile: null,
   status: "",

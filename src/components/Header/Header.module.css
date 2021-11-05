@@ -6,15 +6,31 @@
 }
 
 .header img {
-    width: 110px;
+    width: 30px;
     padding: 10px;
-    border-radius:20px;
 }
 
 .loginBlock {
     float: right;
+    margin: 10px;
 }
 
 .loginBlock a {
     color: white;
+    margin: 20px;
+}
+
+.loginBlock button {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 0px;
+    padding: 5px ;
+    background: #7093D2;
+    transition: 0.05s linear;
+}
+
+.loginBlock button:hover {
+    background: #3D60A1;
 }

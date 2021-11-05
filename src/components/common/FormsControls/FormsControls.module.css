@@ -1,5 +1,6 @@
 .formControl.error input,
 .formControl.error textarea{
+  margin-bottom: 5px;
   border: solid 1px red;
 }
 
@@ -8,7 +9,15 @@
 }
 
 .formSummaryError {
+  margin-bottom: 10px;
   border: solid 1px red;
   padding: 5px;
   color: black;
 }
+
+.formControl input {
+  width: 30%;
+  height: 30px;
+  margin-bottom: 5px;
+}
+

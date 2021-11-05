@@ -23,14 +23,14 @@ let Paginator = ({
 
   return (
     <div className={styles.paginator}>
-      <span>
+      <div>
         {pages
           .filter(
             (p) => p >= leftPortionPageNumber && p <= rightPortionPageNumber
           )
           .map((p) => {
             return (
-              <span
+              <p
                 className={cn(
                   {
                     [styles.selectedPage]: currentPage === p,
@@ -41,12 +41,12 @@ let Paginator = ({
                 onClick={(e) => onPageChanged(p)}
               >
                 {p}
-              </span>
+              </p>
             );
           })}
-      </span>
+      </div>
 
-      <span>
+      <div>
         {portionNumber > 1 && (
           <button
             onClick={() => {
@@ -66,7 +66,7 @@ let Paginator = ({
             Next
           </button>
         )}
-      </span>
+      </div>
     </div>
   );
 };

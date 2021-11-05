@@ -1,10 +1,10 @@
 import styles from "./ProfileInfo.module.css";
 import Preloader from "../../common/Preloader/Preloader";
 import userPhoto from "../../../assets/images/profile-picture-not-found.png";
+import changePhoto from "../../../assets/images/change-photo.png";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import { useState } from "react";
 import ProfileDataForm from "./ProfileDataForm";
-import ProfileDataFormReduxForm from "./ProfileDataForm";
 
 const ProfileInfo = ({
   profile,
@@ -33,31 +33,53 @@ const ProfileInfo = ({
   };
 
   return (
-    <div>
-      <div className={styles.descriptionBlock}>
+    <div className={styles.profileInfo}>
+      <div>
         <img
           className={styles.mainPhoto}
           src={profile.photos.large || userPhoto}
           alt=""
         />
-        {isOwner ? <input type="file" onChange={onMainPhotoSelected} /> : null}
-        <div>
-          <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
-        </div>
+        {isOwner ? (
+          <div>
+            <input
+              className={styles.changePhotoInput}
+              type="file"
+              onChange={onMainPhotoSelected}
+              id="input_file"
+            />
+            <span>
+              <label htmlFor="input_file">
+                <img
+                  className={styles.changePhotoLabel}
+                  src={changePhoto}
+                  alt=""
+                />
+              </label>
+            </span>
+          </div>
+        ) : null}
+      </div>
 
-        {editMode ? (
-          <ProfileDataForm
-            initialValues={profile}
-            profile={profile}
-            onSubmit={onSubmit}
-          />
-        ) : (
-          <ProfileData
-            profile={profile}
-            isOwner={isOwner}
-            goToEditMode={() => setEditMode(true)}
-          />
-        )}
+      <div>
+        <div className={styles.fullName}>{profile.fullName}</div>
+        <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
+
+        <p>
+          {editMode ? (
+            <ProfileDataForm
+              initialValues={profile}
+              profile={profile}
+              onSubmit={onSubmit}
+            />
+          ) : (
+            <ProfileData
+              profile={profile}
+              isOwner={isOwner}
+              goToEditMode={() => setEditMode(true)}
+            />
+          )}
+        </p>
       </div>
     </div>
   );
@@ -66,15 +88,17 @@ const ProfileInfo = ({
 const ProfileData = ({ profile, isOwner, goToEditMode }) => {
   return (
     <div>
-      <div>{isOwner && <button onClick={goToEditMode}>Edit info</button>}</div>
-      <div>Full name: {profile.fullName}</div>
-      <div>Looking for a gob: {profile.lookingForAJob ? "yes" : "no"}</div>
-      {profile.lookingForAJob && (
-        <div>My professional skills: {profile.lookingForAJobDescription}</div>
-      )}
-      <div>About me: {profile.aboutMe}</div>
+      <div className={styles.descriptionBlock}>
+        <div>About me:</div> <span>{profile.aboutMe}</span>
+        <div>Looking for a job:</div>
+        <span>{profile.lookingForAJob ? "yes" : "no"}</span>
+        <div>My professional skills:</div>
+        {profile.lookingForAJob && (
+          <span>{profile.lookingForAJobDescription}</span>
+        )}
+      </div>
+      <div>Contacts:</div>
       <div>
-        <b>Contacts:</b>
         {Object.keys(profile.contacts).map((key) => {
           return (
             <Contact
@@ -84,6 +108,13 @@ const ProfileData = ({ profile, isOwner, goToEditMode }) => {
             />
           );
         })}
+        <div>
+          {isOwner && (
+            <button className={styles.changeButton} onClick={goToEditMode}>
+              Edit
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -91,8 +122,12 @@ const ProfileData = ({ profile, isOwner, goToEditMode }) => {
 
 const Contact = ({ contactTitle, contactValue }) => {
   return (
-    <div className={styles.contact}>
-      <b>{contactTitle}</b>: {contactValue}
+    <div>
+      {contactValue ? (
+        <div className={styles.contactsBlock}>
+          <div>{contactTitle}:</div> <span>{contactValue}</span>
+        </div>
+      ) : null}
     </div>
   );
 };

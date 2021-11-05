@@ -6,34 +6,45 @@
 .users {
     display: grid;
     grid-template-columns: 0fr 3fr 2fr;
-    transition: 0.1s linear;
     padding: 10px;
-    border-bottom: 1px black solid;
-}
-.userInfo {
-    padding-left: 15px;
-    font-size: 25px;
-}
-
-.status {
-    font-size: 15px;
+    border-bottom: 1px #3D60A1 solid;
 }
 
 .users img {
     border-radius: 50%;
 }
 
+.userInfo {
+    padding-left: 15px;
+    font-size: 25px;
+}
+
 .users button {
+    width: 45%;
+    text-align: center;
     color: white;
     font-size: 15px;
     border-radius: 4px;
-    outline: none;
     border: 0px solid;
     padding: 5px 50px;
     background: #3D60A1;
+    transition: 0.05s linear;
 }
 .users button:hover {
     background: #0C5AA6;
 }
+
+.status {
+    font-size: 15px;
+}
+
+.people {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+
+
 
 

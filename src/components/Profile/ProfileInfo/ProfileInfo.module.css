@@ -1,11 +1,64 @@
-.descriptionBlock {
+.profileInfo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     padding: 15px;
+}
+
+.fullName {
+    font-size: 30px;
 }
 
 .mainPhoto {
     width: 250px;
+    border-radius: 4px;
 }
 
-.contact {
-    padding-left: 10px;
+.contactsBlock {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+
+    padding-left: 15px;
+}
+.contactsBlock span {
+    color: white;
+    padding-top: 5px;
+}
+.contactsBlock div {
+    padding-top: 5px;
+}
+
+.descriptionBlock {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+.descriptionBlock span {
+    color: white;
+}
+.descriptionBlock div {
+    padding-bottom: 5px;
+}
+
+.changePhotoInput {
+    display: none;
+}
+.changePhotoLabel {
+    padding-top: 5px;
+    width: 40px;
+}
+
+.changeButton {
+    width: 25%;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 0px;
+    padding: 5px 50px;
+    margin-top: 20px;
+    background: #3D60A1;
+    transition: 0.05s linear;
+}
+
+.changeButton:hover {
+    background: #0C5AA6;
 }

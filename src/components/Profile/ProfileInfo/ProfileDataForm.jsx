@@ -10,7 +10,13 @@ import s from "../../common/FormsControls/FormsControls.module.css";
 const ProfileDataForm = ({ handleSubmit, profile, error }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <div>{<button onClick={() => {}}>Save</button>}</div>
+      <div>
+        {
+          <button className={styles.changeButton} onClick={() => {}}>
+            Save
+          </button>
+        }
+      </div>
       <div>{error && <div className={s.formSummaryError}>{error}</div>}</div>
       <div>Full name: {createField("fullName", Input, [], "Full name")}</div>
       <div>
@@ -31,10 +37,10 @@ const ProfileDataForm = ({ handleSubmit, profile, error }) => {
         {createField("aboutMe", Textarea, [], "About me")}
       </div>
       <div>
-        <b>Contacts:</b>
+        Contacts:
         {Object.keys(profile.contacts).map((key) => {
           return (
-            <div key={key} className={styles.contact}>
+            <div key={key} className={styles.contactsBlock}>
               {key}: {createField("contacts." + key, Input, [], key)}
             </div>
           );

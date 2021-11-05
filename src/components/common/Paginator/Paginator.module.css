@@ -13,18 +13,35 @@
     border: 0px solid;
     padding: 6px 20px;
     margin-right: 8px;
+    margin-bottom: 10px;
     background: #3D60A1;
+    transition: 0.05s linear;
+}
+
+.paginator button:hover {
+    background: #0C5AA6;
 }
 
 .pageNumber {
-
-    margin-right: 8px;
     padding: 2px 0px;
-    border: 1px solid grey;
     background: #3D60A1;
+    border-radius: 4px;
+    margin-right: 2px;
+    font-size: 15px;
+    float: left;
+    width: 4%;
+    height: 38%;
+    text-align: center;
+    transition: 0.05s linear;
+}
+
+.pageNumber:hover {
+    background: #0C5AA6;
 }
 
 .pageNumber.selectedPage {
     font-weight: bold;
-    color: lightgrey;
+    color: white;
+    background: #0C5AA6;
 }
+
